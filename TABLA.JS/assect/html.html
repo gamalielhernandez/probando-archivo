@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>renan gamaliel</title>
+
+    <link href="html.css" rel="stylesheet">
+    <script src="js.js"></script>
+
+</head>
+
+<body>
+    indice <input id="nom" style="margin:10px" type="text"><br><br> nombre completo
+    <input id="ape" style="margin:4px" type="text"><br><br> correo electronico<input id="ced" style="margin:20px" type="text"><br><br>
+    <button id="btn_guardar" onclick="guardar()">Guardar</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>indice</th>
+                <th>nombre completo</th>
+                <th>correo electronico</th>
+
+            </tr>
+            <tr>
+                <td>1219</td>
+                <td>dominguez hernandez</td>
+                <td>renan.@caderh.org</td>
+                <td> <input type="button" value="Delete" class="delete" onclick=delete_row(this)>
+                </td>
+
+            </tr>
+        </thead>
+
+        <tbody id="tablita">
+
+
+
+
+        </tbody>
+
+    </table>
+
+    <button onclick="myFunction()">borrar primera filaa</button>
+    <button onclick="myFunction()"> borrar primera segunda fila</button>
+</body>
+
+</html>

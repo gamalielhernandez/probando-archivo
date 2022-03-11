@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>renan gamaliel</title>
+    <script src="java.js"></script>
+</head>
+
+<body bgcolor="lightblue">
+    <center>
+        <table border="1" cellspacing="5" bgcolor="white">
+            <caption><b>Calificaciones de alumnos</b></caption>
+            <tr>
+                <th rowspan="2">Nomb completo</th>
+                <th colspan="4">asignaciones</th>
+
+            </tr>
+            <tr>
+                <th>nota 1</th>
+                <th>nota 2</th>
+                <th>nota 3</th>
+                <th>nota 4</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="aname"></td>
+                <td><input type="text" id="am"></td>
+                <td><input type="text" id="aj"></td>
+                <td><input type="text" id="ad"></td>
+                <td><input type="text" id="an"></td>
+
+            </tr>
+
+
+            <tr>
+                <th colspan="5" height="30">
+                    <input type="submit" value="agregar a tabla" onclick="Sub()"></th>
+            </tr>
+        </table>
+        <br>
+        <table border="1" cellspacing="5" bgcolor="white" height="100" width="500" cellpadding="5" id="TableScore">
+            <caption><b>tabla de suma y promedio</b></caption>
+            <tr>
+                <th width="180">nombre</th>
+
+
+                <th>nota 1</th>
+                <th>nota 2</th>
+                <th>nota 3</th>
+                <th>nota 4</th>
+
+
+                <th>Total</th>
+                <th>Promedio</th>
+                <th>pasado o fallido</th>
+
+            </tr>
+
+        </table>
+    </center>
+    <script type="text/javascript">
+        function Sub() {
+            var n, k, r, e, v, sum, avg;
+            n = (document.getElementById('aname').value);
+            k = parseFloat(document.getElementById('am').value);
+            r = parseFloat(document.getElementById('aj').value);
+            e = parseFloat(document.getElementById('ad').value);
+            v = parseFloat(document.getElementById('an').value);
+            // Calculating Total
+            sum = k + r + e + v;
+            avg = sum / 4;
+            // Display on Student Data
+            var newTable = document.getElementById('TableScore');
+            var row = newTable.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(0);
+            var cell3 = row.insertCell(0);
+            var cell4 = row.insertCell(0);
+
+            var cell5 = row.insertCell(0);
+            var cell6 = row.insertCell(0);
+            var cell7 = row.insertCell(0);
+            var cell8 = row.insertCell(0);
+
+
+            cell4.innerHTML = v;
+            cell5.innerHTML = e;
+            cell6.innerHTML = r;
+            cell7.innerHTML = k;
+            cell8.innerHTML = n;
+
+            cell3.innerHTML = sum;
+            cell2.innerHTML = avg;
+
+            if (avg >= 70) {
+                cell1.innerHTML = "<font color=green>Pasado</font>";
+            } else {
+                cell1.innerHTML = "<font color=red>reprobado</font>";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+<!--curso1.forEach(curso1 => {
+    document.write("<p>" + curso1.nombre + "</p>");
+    document.write("<ul>");
+
+
+    document.write("</ul></li>");
+    document.write("<li> " + curso1.calificaciones + "</li>");
+    document.write("</ul>");
+});-->
